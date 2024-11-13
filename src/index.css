@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: font;
+  src: url(./assets/0f1d2027f7f894f6cf6e.woff2);
+}
+
+video,img {
+  -webkit-appearance: none;
+  -webkit-clip-path: inset(0px round 4px);
+  border: none;
+  outline: none;
+}
+
+
+*{
+  font-family: font;
+}
+
+.typed-cursor {
+  display: none;
+}
+
+.blink-animation {
+  animation: blink 1s   infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

@@ -13,25 +13,29 @@ const InfoCard = () => {
 
   return (
     <>
-      <div className="grid grid-cols-4 px-5 gap-3">
+      <div className="grid grid-cols-4 px-5 max-sm:grid-cols-2 max-sm:px-3 max-sm:gap-2 gap-3">
         {cards.map((item, index) => (
           <div
             key={index}
-            className={`h-96 ${
+            className={`h-96 max-sm:h-72 ${
               index === 1 || index === 2 ? "col-span-1" : "col-span-2"
+            }
+            ${
+              index === 3 || index === 4 ? "max-sm:col-span-1" : "col-span-1"
             }
           ${
             index === 0 ? "bg-black text-white" : "bg-[#f4f4f4]"
-          } rounded-xl px-6 py-4
+            
+          } rounded-xl px-6 py-4 max-sm:px-3 max-sm:py-3
           ${
             index > 0 &&
-            "hover:bg-[#ffe943] ease-linear duration-300 flex flex-col justify-between group"
+            "md:hover:bg-[#ffe943] max-sm:active:bg-[#ffe943] ease-linear duration-300 flex flex-col justify-between group"
           }
            relative`}
           >
             <h1
               className={`${
-                index === 0 ? "text-5xl" : "text-[108px]"
+                index === 0 ? "text-5xl" : "text-[108px] max-sm:text-[56px]"
               } leading-none  flex gap-3`}
             >
               {index === 0 && (
@@ -47,7 +51,7 @@ const InfoCard = () => {
               {index > 0 && (
                 <div className=" absolute left-0 bottom-28 w-full h-[.9px] bg-gray-300"></div>
               )}
-              <div className="text-4xl w-fit duration-300 ease-linear group-hover:rotate-180">
+              <div className="text-4xl max-sm:text-2xl w-fit duration-300 ease-linear md:group-hover:rotate-180">
                 {index > 0 && <BsFillPlusCircleFill />}
               </div>
             </div>
@@ -55,7 +59,7 @@ const InfoCard = () => {
         ))}
       </div>
 
-        <Discription  head={"About us"} number={"14"} button={"Read more"}/>
+        <Discription  head={"About us"} number={"©️12-24"} button={"Read more"}/>
       
     </>
   );

@@ -104,29 +104,29 @@ const Portfolio = () => {
 
   return (
     <div className="">
-      <div className=" border-t h-[30vh] px-5 py-4 w-full flex justify-between border-zinc-200">
+      <div className=" border-t h-[30vh] max-sm:h-[20vh] max-sm:px-3 px-5 py-4 w-full flex max-sm:flex-col justify-between border-zinc-200">
           <h3 className="flex gap-2 h-fit items-center"><FaCircle /> Portfolio</h3>
-          <div className=" flex w-[50%] justify-between">
-          <h1 className=" w-[50%] text-4xl">
+          <div className=" flex w-[50%] max-sm:w-full justify-between">
+          <h1 className=" w-[50%] max-sm:w-full max-sm:text-2xl text-4xl">
           We help brands grow and tell their stories to the world.</h1>
-          <h1 className="text-4xl">_14</h1>
+          <h1 className="text-4xl max-sm:hidden">_14</h1>
           </div>
       </div>
-      <div className="grid grid-cols-4 gap-3 gap-y-14 p-5 hover: group">
+      <div className="grid grid-cols-4 max-sm:grid-cols-1 gap-3 gap-y-14 max-sm:gap-y-4 max-sm:p-3 p-5 hover: group">
         {portfolioData.map((item, index) => (
           <div
             key={index}
-            className={`h-[80vh] ${
+            className={`h-[80vh] max-sm:h-[46vh] ${
               index === 3 || index === 4 || index === 9 || index === 10
                 ? "col-span-1"
-                : "col-span-2"
+                : "col-span-2 max-sm:col-span-1"
             }`}
           >
             <div className="overflow-hidden rounded-lg ">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover max-sm:active:scale-110 md:hover:scale-110 transition-transform duration-700"
               />
             </div>
             <div className="mt-5 leading-[18px]">

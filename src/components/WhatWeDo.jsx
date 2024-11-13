@@ -51,20 +51,21 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div className="mb-[15vw] mt-[6vw]">
+    <div className="mb-[15vw] max-sm:mb-[40vw] relative max-sm:mt-[6vw]">
+       <h2 className=" max-sm:absolute top-[-5%] left-3 sm:hidden "> What we do</h2>
       {barsData.map((item, index) => (
-        <div key={index} className="h-[35vh]  flex w-full border-b border-zinc-200 py-3 px-5">
-          <div className=" w-1/2 flex flex-col justify-between h-full">
-            <h2>{item.topHead}</h2>
-            <h1 className=" text-3xl font-medium">{item.bottomHead}</h1>
+        <div key={index} className="h-[35vh]  flex w-full border-b border-zinc-200 max-sm:gap-8 max-sm:flex-col-reverse max-sm:px-3 py-3 px-5">
+          <div className=" w-1/2 flex flex-col justify-between">
+            <h2 className="max-sm:hidden">{item.topHead}</h2>
+            <h1 className="text-3xl max-sm:text-2xl font-medium">{item.bottomHead}</h1>
           </div>
-          <div className=" h-full w-1/2">
+          <div className=" h-full w-1/2 max-sm:h-[80%] max-sm:w-full">
             <div
               className="imageDiv h-full w-full rounded-lg overflow-hidden"
               ref={(el) => (imageRefs.current[index] = el)}
             >
               <img
-                className=" h-full w-full object-cover object-center"
+                className=" h-full w-full max-sm:scale-110 object-cover object-center"
                 src={item.image}
                 alt=""
               />

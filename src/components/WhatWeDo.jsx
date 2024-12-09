@@ -67,6 +67,7 @@ const WhatWeDo = () => {
               <img
                 className=" h-full w-full max-sm:scale-110 object-cover object-center"
                 src={item.image}
+                loading="lazy"                
                 alt=""
               />
             </div>

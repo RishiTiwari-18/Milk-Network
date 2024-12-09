@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { FaCircle } from "react-icons/fa6";
 import Discription from "./Discription";
-const Portfolio = () => {
+
+const Portfolio = memo(() => {
   const portfolioData = [
     {
       image:
@@ -126,6 +127,7 @@ const Portfolio = () => {
               <img
                 src={item.image}
                 alt={item.title}
+                loading="lazy"
                 className="w-full h-full object-cover max-sm:active:scale-110 md:hover:scale-110 transition-transform duration-700"
               />
             </div>
@@ -141,6 +143,6 @@ const Portfolio = () => {
       <Discription head={"Works"} number={"_38"} button={"Discover all works"} />
     </div>
   );
-};
+});
 
 export default Portfolio;

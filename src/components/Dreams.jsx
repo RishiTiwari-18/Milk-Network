@@ -26,6 +26,7 @@ const Dreams = () => {
           className=" w-full h-full object-contain max-sm:scale-100 scale-[2]"
           src="https://strapi-cms-3mz0.onrender.com/uploads/img38_64977c1583.jpg"
           alt=""
+          loading="lazy"
         />
         <div className=" absolute h-full flex  flex-col justify-between p-10 max-sm:p-3 w-full top-0 left-0">
           <div className="flex justify-between">
